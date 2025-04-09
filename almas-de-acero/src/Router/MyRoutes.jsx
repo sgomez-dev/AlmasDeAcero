@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom"
 import Navbar from '../components/Navbar'
 import Inicio from '../pages/Inicio'
 import Nosotros from '../pages/Nosotros'
@@ -8,7 +8,7 @@ import PruebaTuAcero from '../pages/PruebaTuAcero'
 
 export const MyRoutes = () => {
   return (
-    <>
+    <HashRouter>
         <Navbar />
 
         <section className='h-[calc(100%-65px)]'>
@@ -26,6 +26,6 @@ export const MyRoutes = () => {
             }></Route>
           </Routes>
         </section>
-    </>
+    </HashRouter>
   )
 }
