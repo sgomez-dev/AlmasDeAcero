@@ -10,4 +10,4 @@ export const HERO = {
     slogan: "No todos los héroes llevan capa",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-  };    
+};
