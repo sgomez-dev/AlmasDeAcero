@@ -32,7 +32,7 @@ const Inicio = () => {
         className="w-1/2 md:w-full flex justify-center items-center"
       >
         <NavLink to="/nosotros">
-        <button className="bg-[#A18167] border-1 border-black text-white text-2xl px-4 py-2 rounded-full hover:bg-[#A18167]/80 transition-all duration-300 w-100">
+        <button className="bg-[#A18167] border-1 border-black text-white text-2xl px-4 py-2 rounded-full hover:bg-[#A18167]/80 transition-all duration-300">
           Conoce al equipo
         </button>
         </NavLink>
