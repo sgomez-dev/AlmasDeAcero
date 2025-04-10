@@ -69,7 +69,6 @@ const TeamGrid = () => {
                       <img src={member.image} alt={member.name} className="w-full h-full object-cover rounded-full" />
                     </div>
                     <h3 className="text-xl font-semibold mt-4 mb-2 text-center">{member.name}</h3>
-                    <p>{member.description}</p>
                   </div>
                 </div>
               ))}
