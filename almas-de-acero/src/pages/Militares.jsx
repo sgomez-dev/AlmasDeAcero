@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Militares = () => {
+  const Militares = () => {
   return (
     <div>Militares</div>
   )
 }
+
+export default Militares;

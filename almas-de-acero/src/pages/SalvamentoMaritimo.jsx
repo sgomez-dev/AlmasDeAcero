@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const SalvamentoMaritimo = () => {
+const SalvamentoMaritimo = () => {
   return (
     <div>SalvamentoMaritimo</div>
   )
 }
+
+export default SalvamentoMaritimo;

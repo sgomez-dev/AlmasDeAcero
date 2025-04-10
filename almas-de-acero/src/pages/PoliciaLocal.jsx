@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const PoliciaLocal = () => {
+const PoliciaLocal = () => {
   return (
     <div>PoliciaLocal</div>
   )
 }
+
+export default PoliciaLocal;
