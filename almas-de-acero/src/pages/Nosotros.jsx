@@ -8,7 +8,7 @@ const Nosotros = () => {
       <section className="w-full flex flex-col justify-start items-center p-4">
         <div className="w-full md:w-2/3 lg:w-1/2">
           <h2 className="text-4xl font-bold text-center mb-6">
-            Conoce al equipo
+            Conoce nuestro equipo
           </h2>
           <p className="text-center text-lg mb-12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies et tortor sit amet hendrerit. Duis condimentum maximus eros eget vestibulum. Sed sed feugiat dolor, id sollicitudin felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
