@@ -60,11 +60,8 @@ const TeamGrid = () => {
               style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
             >
               {TEAM_MEMBERS.map((member) => (
-                <motion.div
+                <div
                   key={member.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
                   className="flex-none w-full md:w-1/2 lg:w-1/3 p-4"
                 >
                   <div className="flex flex-col items-center">
@@ -72,8 +69,9 @@ const TeamGrid = () => {
                       <img src={member.image} alt={member.name} className="w-full h-full object-cover rounded-full" />
                     </div>
                     <h3 className="text-xl font-bold mt-4 mb-2">{member.name}</h3>
+                    <p>{member.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

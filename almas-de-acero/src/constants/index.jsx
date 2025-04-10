@@ -1,6 +1,13 @@
 export const NAVIGATION_LINKS = [
     { href: "/", label: "Inicio" },
-    { href: "/profesiones", label: "Profesiones" },
+    { href: "/profesiones", label: "Profesiones", 
+        children: [
+            { href: "/profesiones/bomberos", label: "Bomberos" },
+            { href: "/profesiones/policia-local", label: "Policia Local" },
+            { href: "/profesiones/salvamento-maritimo", label: "Salvamento Marítimo" },
+            { href: "/profesiones/militares", label: "Militares" },
+        ]
+     },
     { href: "/nosotros", label: "Nosotros" },
     { href: "/prueba-tu-acero", label: "Prueba tu acero" },
 ];
