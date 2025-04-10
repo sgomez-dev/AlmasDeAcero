@@ -1,15 +1,41 @@
 import { useState } from "react";
 import { NAVIGATION_LINKS } from "../constants";
 import { FaTimes } from "react-icons/fa";
-import { FaBars } from "react-icons/fa6";
+import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileDropdownOpen(false); // Cerrar dropdown al cerrar menú móvil
   };
+
+  const toggleDropdown = (e) => {
+    e.stopPropagation(); // Prevenir que el click se propague
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const toggleMobileDropdown = (e) => {
+    e.stopPropagation(); // Prevenir que el click se propague
+    setIsMobileDropdownOpen(!isMobileDropdownOpen);
+  };
+
+  // Cerrar dropdown cuando se hace click fuera
+  const handleClickOutside = () => {
+    setIsDropdownOpen(false);
+  };
+
+  // Agregar event listener para cerrar dropdown al hacer click fuera
+  useState(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
@@ -40,20 +66,48 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div>
-          <ul className="flex items-center gap-8 font-semibold">
+          <ul className="flex items-center gap-8 font-semibold relative">
             {NAVIGATION_LINKS.map((item, index) => (
-              <li key={index}>
-                <NavLink
-                  to={item.href}
-                  className={({ isActive }) =>
-                    `text-sm hover:text-[#A18167] ${
-                      isActive ? "text-[#A18167]" : ""
-                    }`
-                  }
-                  end={item.href === "/"}
-                >
-                  {item.label}
-                </NavLink>
+              <li key={index} className="relative">
+                {item.children ? (
+                  <>
+                    <button
+                      onClick={toggleDropdown}
+                      className="flex items-center gap-1 text-sm hover:text-[#A18167]"
+                    >
+                      {item.label}
+                    </button>
+                    {isDropdownOpen && (
+                      <ul className="absolute left-0 mt-6 w-48 flex-col gap-2 rounded-lg bg-[#f3e3d4] pt-1 pb-1 shadow-lg">
+                        {item.children.map((child, i) => (
+                          <li key={i} className="hover:bg-[#e2d3c5] hover:text-black">
+                            <NavLink
+                              to={child.href}
+                              className={({ isActive }) =>
+                                `block px-4 py-2 text-sm ${
+                                  isActive ? "text-[#A18167] hover:text-black" : ""
+                                }`
+                              }
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              {child.label}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <NavLink
+                    to={item.href}
+                    className={({ isActive }) =>
+                      `text-sm hover:text-[#A18167] ${isActive ? "text-[#A18167]" : ""}`
+                    }
+                    end={item.href === "/"}
+                  >
+                    {item.label}
+                  </NavLink>
+                )}
               </li>
             ))}
           </ul>
@@ -82,18 +136,51 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4 bg-[#f3e3d4] px-4 py-4 rounded-2xl">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
-                <NavLink
-                  to={item.href}
-                  className={({ isActive }) =>
-                    `block w-full text-lg hover:text-[#A18167] ${
-                      isActive ? "text-[#A18167]" : ""
-                    }`
-                  }
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  end={item.href === "/"}
-                >
-                  {item.label}
-                </NavLink>
+                {item.children ? (
+                  <div className="flex flex-col gap-2">
+                    <button
+                      onClick={toggleMobileDropdown}
+                      className="flex items-center justify-between text-lg"
+                    >
+                      {item.label}
+                    </button>
+                    {isMobileDropdownOpen && (
+                      <ul className="ml-4 flex flex-col gap-1">
+                        {item.children.map((child, i) => (
+                          <li key={i}>
+                            <NavLink
+                              to={child.href}
+                              className={({ isActive }) =>
+                                `text-base hover:text-[#A18167] ${
+                                  isActive ? "text-[#A18167]" : ""
+                                }`
+                              }
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsMobileDropdownOpen(false);
+                              }}
+                            >
+                              {child.label}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink
+                    to={item.href}
+                    className={({ isActive }) =>
+                      `block w-full text-lg hover:text-[#A18167] ${
+                        isActive ? "text-[#A18167]" : ""
+                      }`
+                    }
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    end={item.href === "/"}
+                  >
+                    {item.label}
+                  </NavLink>
+                )}
               </li>
             ))}
           </ul>
