@@ -6,7 +6,7 @@ const ReportajeList = () => {
   const secundarios = reportajes.slice(1); // El resto
 
   return (
-    <div className="container mx-auto px-4 max-h-[80vh] overflow-y-auto pr-2">
+    <div className="container mx-auto px-4 max-h-[80vh] pr-2">
         
       {/* Reportaje principal */}
       <div className="bg-[#E9D3C0] p-6 rounded-lg shadow-md flex flex-col md:flex-row mb-8">

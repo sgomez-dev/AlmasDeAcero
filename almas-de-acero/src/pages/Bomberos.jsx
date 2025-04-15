@@ -1,13 +1,13 @@
-import React from 'react'
-import ReportajeList from '../components/ReportajeList'
+import React from 'react';
+import ReportajeList from '../components/ReportajeList';
+import FadeScrollArea from '../components/FadeScrollArea'; // ruta según dónde lo pongas
 
 const Bomberos = () => {
   return (
-    <div className='mt-20'>
-      <h1 className='text-center'>Reportajes de Bomberos</h1>
-      <ReportajeList/>
-    </div>
-  )
-}
+    <FadeScrollArea className="flex-1 pt-20 pb-10 px-4">
+      <ReportajeList />
+    </FadeScrollArea>
+  );
+};
 
 export default Bomberos;
