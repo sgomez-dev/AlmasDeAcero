@@ -1,4 +1,7 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 .fade-mask {
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 96%, transparent 100%);

@@ -23,7 +23,7 @@ export const MyRoutes = () => {
             <Route path="/nosotros" element={<Nosotros />}></Route>
             <Route path="/profesiones" element={<Profesiones />}></Route>
             <Route path="/profesiones/bomberos" element={<Bomberos />}></Route>
-            <Route path="/profesiones/bomberos/:id" element={<ReportajeDetalle/>}></Route>
+            <Route path="/profesiones/:profesion/:id" element={<ReportajeDetalle />} />
             <Route path="/profesiones/policia-local" element={<PoliciaLocal />}></Route>
             <Route path="/profesiones/salvamento-maritimo" element={<SalvamentoMaritimo />}></Route>
             <Route path="/profesiones/militares" element={<Militares />}></Route>

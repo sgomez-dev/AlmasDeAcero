@@ -2,9 +2,9 @@ import React from 'react';
 
 export const Rep_Bomberos_02 = () => {
     return (
-        <div className="mt-16">
+        <div className="xl2:pt-16 pt-0 px-4">
             <div className="h-screen flex flex-col">
-                <div className="flex-grow overflow-y-auto flex justify-center">
+                <div className="flex-grow overflow-y-auto scrollbar-hide flex justify-center">
                     <div className="max-w-4xl py-8 px-0">
                         {/* Contenedor de imagen + título y autores */}
                         <div className="flex flex-col md:flex-row gap-6 mb-8">
@@ -13,7 +13,7 @@ export const Rep_Bomberos_02 = () => {
                                 <img
                                     src="public/reportajes/bomberos/Rep_Bomberos_02.jpg"
                                     alt="Imagen del reportaje"
-                                    className="w-full h-auto rounded-lg shadow-md object-cover"
+                                    className="w-full max-w-[600px] h-auto object-cover rounded-lg shadow-md"
                                 />
                             </div>
 

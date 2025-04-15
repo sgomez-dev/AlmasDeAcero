@@ -1,18 +1,18 @@
-export const reportajesBomberos = [
+export const reportajesSalvamentoMaritimo = [
     {
       id: 1,
-      titulo: "El día que el viento sur arrasó Santander",
+      titulo: "Lo más peligroso del mar y sus superhéroes",
       autores: ["Pablo Vázquez", "Sofía Toraya"],
-      subtitulo: "El día que un incendio calcinó todo el casco histórico de Santander y parte de sus alrededores, dejando gran parte de la población sin sus viviendas",
-      foto: "public/reportajes/bomberos/Rep_Bomberos_01.jpg",
+      subtitulo: "En las costas del país peninsular hay puntos donde el mar no concede ningún tipo de tregua con los trabajadores de salvamento marítimo. El clima de estas zonas, la gran cantidad de tráfico o las rutas migratorias en pequeñas embarcaciones hace que en cualquier momento ocurra un suceso. Desde el mar revuelto y agresivo del Atlántico hasta las profundas aguas calientes llenas de fauna y flora de Canarias. Los equipos ponen constantemente su vida en peligro para proteger las vidas humanas de las personas que se lanzan al mar. Este reportaje trata de enseñar a los desconocedores de estas zonas muy activas y peligrosas para que la gente sepa que hacer y así no arriesgar su vida y la de los trabajadores de salvamento marítimo.",
+     
     },
-    {
-      id: 2,
-      titulo: "Bomberos: Valor y Vocación",
-      autores: ["Pablo Vázquez", "Sofía Toraya"],
-      subtitulo: "La razón, por la cual el día del bombero se celebra el día 4 de mayo en la mayoría de lugares del mundo",
-      foto: "public/reportajes/bomberos/Rep_Bomberos_02.jpg",
-    },
+    // {
+    //   id: 2,
+    //   titulo: "Bomberos: Valor y Vocación",
+    //   autores: ["Pablo Vázquez", "Sofía Toraya"],
+    //   subtitulo: "La razón, por la cual el día del bombero se celebra el día 4 de mayo en la mayoría de lugares del mundo",
+    //   foto: "public/reportajes/bomberos/Rep_Bomberos_02.jpg",
+    // },
     // {
     //   id: 3,
     //   titulo: "La explosión química del puerto",
