@@ -69,5 +69,12 @@ export const reportajes = [
       subtitulo: "Un coche ardiendo en el centro de la ciudad",
       foto: "/Reportajes/Bomberos/urbano.jpg",
     },
+    {
+        id: 11,
+        titulo: "Crónica de una intervención urbana",
+        autores: ["Raúl Nieto"],
+        subtitulo: "Un coche ardiendo en el centro de la ciudad",
+        foto: "/Reportajes/Bomberos/urbano.jpg",
+      },
   ];
   

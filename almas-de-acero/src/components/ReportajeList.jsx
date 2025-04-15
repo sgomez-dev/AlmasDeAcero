@@ -1,18 +1,44 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { reportajes } from "../constants/ReportajesBomberos";
 import { useNavigate } from "react-router-dom";
 
 const ReportajeList = () => {
   const navigate = useNavigate();
+  const scrollRef = useRef(null);
+  const [maskClass, setMaskClass] = useState("");
+
   const principal = reportajes[0];
   const secundarios = reportajes.slice(1);
 
   const handleClick = (id) => {
-    navigate(`${id}`);
+    navigate(`/profesiones/bomberos/${id}`);
   };
 
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const atTop = el.scrollTop === 0;
+      const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+
+      if (atTop && atBottom) {
+        setMaskClass("");
+      } else {
+        setMaskClass("fade-mask");
+      }
+    };
+
+    handleScroll(); // estado inicial
+    el.addEventListener("scroll", handleScroll);
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="container mx-auto px-4">
+    <div
+      ref={scrollRef}
+      className={`relative h-[calc(100vh-120px)] overflow-y-auto scrollbar-hide ${maskClass} px-4`}
+    >
       {/* Principal */}
       <div
         onClick={() => handleClick(principal.id)}
@@ -35,7 +61,7 @@ const ReportajeList = () => {
       </div>
 
       {/* Secundarios */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-10">
         {secundarios.map((rep) => (
           <div
             key={rep.id}
