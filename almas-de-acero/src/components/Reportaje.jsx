@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reportaje = ({ data }) => {
   return (
-    <div className="mt-16 pb-10"> {/* Margen para el navbar */}
+    <div className="pb-10"> {/* Margen para el navbar */}
       <div className="h-screen flex flex-col">
         <div className="flex-grow overflow-y-auto">
           <div className="max-w-4xl mx-auto px-4 py-8">

@@ -16,7 +16,7 @@ export const MyRoutes = () => {
     <HashRouter>
         <Navbar />
 
-        <section className='h-[calc(100%-65px)]'>
+        <section>
           <Routes>
             <Route path="/" element={<Navigate to="/inicio" />}></Route>
             <Route path="/inicio" element={<Inicio />}></Route>

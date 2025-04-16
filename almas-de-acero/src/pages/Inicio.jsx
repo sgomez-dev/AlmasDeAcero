@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Inicio = () => {
   return (
-    <section className="h-full w-full flex flex-col justify-start items-center p-4 mt-20">
+    <section className="h-full w-full flex flex-col justify-start items-center p-4">
         <div
         className="w-full md:w-1/2 lg:p-4"
       >
