@@ -56,9 +56,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50">
+    <nav className="block left-0 right-0 top-0 z-50">
       {/* Desktop Navbar */}
-      <div className="hidden h-[65px] w-full items-center justify-between border-black/30 bg-[#C1B396] px-4 py-3 background-blur-lg lg:flex lg:px-8">
+      <div className="hidden h-[65px] w-full items-center justify-between border-black/30 bg-[#C1B396] px-4 py-3 background-blur-lg lg:flex lg:px-4">
         <div className="flex items-center gap-2">
           <NavLink to="/" className="flex items-center gap-2">
             <img src="/logo.png" width={55} alt="logo" />

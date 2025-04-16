@@ -5,7 +5,7 @@ export const NAVIGATION_LINKS = [
             { href: "/profesiones/bomberos", label: "Bomberos" },
             { href: "/profesiones/policia-local", label: "Policia Local" },
             { href: "/profesiones/salvamento-maritimo", label: "Salvamento Marítimo" },
-            { href: "/profesiones/militares", label: "Militares" },
+            { href: "/profesiones/militares", label: "Militares (Aun no disponible)" },
         ]
      },
     { href: "/nosotros", label: "Nosotros" },
