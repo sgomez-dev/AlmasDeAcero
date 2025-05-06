@@ -2,7 +2,7 @@
 import { reportajesBomberos } from '../constants/ReportajesBomberos';
 import { reportajesPoliciaLocal } from '../constants/ReportajesPoliciaLocal';
 import { reportajesSalvamentoMaritimo } from '../constants/ReportajesSalvamentoMaritimo';
-
+import FloatingCTA from '../components/FloatingCTA';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { COMPONENTES_BOMBEROS } from '../reportajes/bomberos';
@@ -66,6 +66,8 @@ const ReportajeDetalle = () => {
 
       {/* CONTENIDO DEL REPORTAJE */}
       <ReportajeComponent />
+      <FloatingCTA path={`/linea-del-tiempo/${profesion}`} />
+
 
       {/* BOTONES LATERALES FIJOS SOLO A PARTIR DE 1605px */}
       {anterior && (
