@@ -1,4 +1,5 @@
 export const Rep_Bomberos_02 = {
+    "foto": "/images/reportajes/bomberos/Rep_Bomberos_02.JPG",
     "titulo": "Bomberos: Valor y Vocación",
     "subtitulo": "la razón, por la cual el día del bombero se celebra el día 4 de mayo en la mayoría de lugares del mundo",
     "autores": ["Pablo Vázquez", "Sofía Toraya"],
