@@ -10,6 +10,9 @@ import PoliciaLocal from '../pages/PoliciaLocal'
 import SalvamentoMaritimo from '../pages/SalvamentoMaritimo'
 import Militares from '../pages/Militares'
 import ReportajeDetalle from '../pages/ReporajeDetalle';
+import PasadoBomberos from '../pages/PasadoBomberos';
+import PasadoPoliciaLocal from '../pages/PasadoPoliciaLocal';
+import PasadoSalvamentoMaritimo from '../pages/PasadoSalvamentoMaritimo';
 
 export const MyRoutes = () => {
   return (
@@ -28,6 +31,9 @@ export const MyRoutes = () => {
             <Route path="/profesiones/salvamento-maritimo" element={<SalvamentoMaritimo />}></Route>
             <Route path="/profesiones/militares" element={<Militares />}></Route>
             <Route path="/prueba-tu-acero" element={<PruebaTuAcero />}></Route>
+            <Route path="/linea-del-tiempo/bomberos" element={<PasadoBomberos />}></Route>
+            <Route path="/linea-del-tiempo/policia-local" element={<PasadoPoliciaLocal />}></Route>
+            <Route path="/linea-del-tiempo/salvamento-maritimo" element={<PasadoSalvamentoMaritimo />}></Route>
             <Route path="*" element={
               <div className='page mt-20'>
                 <h1 className='heading'>Error 404</h1>
