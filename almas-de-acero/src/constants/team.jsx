@@ -37,7 +37,7 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 7,
-    name: "Santiago Gómez de la Torre",
+    name: "Santiago Gómez de la Torre Romero",
     image: "/Santiago.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
   },

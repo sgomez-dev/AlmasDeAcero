@@ -16,7 +16,7 @@ const Nosotros = () => {
         </div>
       </section>
       
-      <div className="mt-auto">
+      <div className="mt-auto pb-20">
         <TeamGrid />
       </div>
     </div>

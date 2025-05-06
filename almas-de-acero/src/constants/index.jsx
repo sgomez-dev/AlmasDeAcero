@@ -8,7 +8,7 @@ export const NAVIGATION_LINKS = [
         ]
      },
     { href: "/nosotros", label: "Nosotros" },
-    { href: "/prueba-tu-acero", label: "Prueba tu acero" },
+    //{ href: "/prueba-tu-acero", label: "Prueba tu acero" },
 ];
 
 export const HERO = {

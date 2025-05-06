@@ -4,14 +4,14 @@ export const reportajesBomberos = [
       titulo: "El día que el viento sur arrasó Santander",
       autores: ["Pablo Vázquez", "Sofía Toraya"],
       subtitulo: "El día que un incendio calcinó todo el casco histórico de Santander y parte de sus alrededores, dejando gran parte de la población sin sus viviendas",
-      foto: "public/reportajes/bomberos/Rep_Bomberos_01.jpg",
+      foto: "/public/reportajes/bomberos/Rep_Bomberos_01.jpg",
     },
     {
       id: 2,
       titulo: "Bomberos: Valor y Vocación",
       autores: ["Pablo Vázquez", "Sofía Toraya"],
       subtitulo: "La razón, por la cual el día del bombero se celebra el día 4 de mayo en la mayoría de lugares del mundo",
-      foto: "public/reportajes/bomberos/Rep_Bomberos_02.jpg",
+      foto: "/public/reportajes/bomberos/Rep_Bomberos_02.jpg",
     },
     // {
     //   id: 3,
