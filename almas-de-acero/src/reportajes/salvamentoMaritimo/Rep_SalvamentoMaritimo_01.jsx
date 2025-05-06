@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Rep_SalvamentoMaritimo_01 = () => {
     return (
-        <div className="mt-16">
+        <div>
             <div className="h-screen flex flex-col">
                 <div className="flex-grow overflow-y-auto flex justify-center">
                     <div className="max-w-4xl py-8 px-0">
@@ -73,7 +73,7 @@ export const Rep_SalvamentoMaritimo_01 = () => {
                             <p className="text-justify leading-relaxed">
                                 El trabajo de los equipos de rescate es difícil, ya que las distancias entre las islas y las condiciones cambiantes del océano hacen complicadas las operaciones. Además, la carencia de recursos en muchas de las embarcaciones migratorias aumenta el peligro de hundimientos. Los equipos de Salvamento Marítimo, con el apoyo de helicópteros y lanchas rápidas, enfrentan constantes problemas logísticos y operativos para asegurar la protección de los sobrevivientes en el mar. 
                             </p>
-                            <p className="text-justify leading-relaxed">
+                            <p className="text-justify leading-relaxed pb-20">
                                 La gran cantidad de tráfico marítimo y los rescates humanitarios convierten la zona en una de las más desafiantes para los profesionales de esta red de seguridad en el mar.
                             </p>
                         </div>

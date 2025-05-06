@@ -5,9 +5,9 @@ import { reportajesBomberos } from '../constants/ReportajesBomberos';
 
 const Bomberos = () => {
   return (
-    <FadeScrollArea className="flex-1 pt-20 pb-10 px-4">
-    <ReportajeList reportajes={reportajesBomberos} basePath="/profesiones/bomberos" />
-  </FadeScrollArea>
+    <FadeScrollArea className="flex-1 pt-10 pb-10 px-4">
+      <ReportajeList reportajes={reportajesBomberos} basePath="/profesiones/bomberos" />
+    </FadeScrollArea>
   );
 };
 

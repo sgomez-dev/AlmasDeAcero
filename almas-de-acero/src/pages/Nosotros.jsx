@@ -11,8 +11,7 @@ const Nosotros = () => {
             Conozca nuestro equipo
           </h2>
           <p className="text-center text-lg mb-12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies et tortor sit amet hendrerit. Duis condimentum maximus eros eget vestibulum. Sed sed feugiat dolor, id sollicitudin felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          </p>
+          Somos estudiantes de Periodismo e Ingeniería informática de la Universidad Europea del Atlántico. Estamos comprometidos con reivindicar la importancia de los servicios de seguridad de Cantabria, demostrando lo fundamentales que son para el bienestar y la protección de la ciudadanía. A través de nuestro trabajo, buscamos dar visibilidad a la labor que realizan día a día profesionales, quienes muchas veces pasan desapercibidos a pesar de su entrega constante. Nuestra intención es resaltar no solo su valor operativo, sino también el impacto social que tienen en la construcción de una comunidad más segura, cohesionada y resiliente.          </p>
         </div>
       </section>
       
