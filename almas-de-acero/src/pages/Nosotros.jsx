@@ -4,7 +4,8 @@ import TeamGrid from "../components/TeamGrid";
 
 const Nosotros = () => {
   return (
-    <div className="flex flex-col min-h-[calc(100vh-65px)] justify-between mt-25">
+    <div className="overflow-y-auto scrollbar-hide relative">
+    <div className="flex flex-col h-screen justify-between mt-25">
       <section className="w-full flex flex-col justify-start items-center p-4">
         <div className="w-full md:w-2/3 lg:w-1/2">
           <h2 className="text-4xl font-bold text-center mb-6">
@@ -18,6 +19,7 @@ const Nosotros = () => {
       <div className="mt-auto">
         <TeamGrid />
       </div>
+    </div>
     </div>
   );
 };
