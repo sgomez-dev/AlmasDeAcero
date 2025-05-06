@@ -78,7 +78,7 @@ const Navbar = () => {
                       {item.label}
                     </button>
                     {isDropdownOpen && (
-                      <ul className="absolute left-0 mt-6 w-48 flex-col gap-2 rounded-lg bg-[#f3e3d4] pt-1 pb-1 shadow-lg">
+                      <ul className="absolute left-0 mt-6 w-48 flex-col gap-2 rounded-lg bg-[#f3e3d4] pt-1 pb-1 shadow-lg z-50">
                         {item.children.map((child, i) => (
                           <li key={i} className="hover:bg-[#e2d3c5] hover:text-black">
                             <NavLink
@@ -133,57 +133,59 @@ const Navbar = () => {
           </button>
         </div>
         {isMobileMenuOpen && (
-          <ul className="flex flex-col gap-4 bg-[#f3e3d4] px-4 py-4 rounded-2xl">
-            {NAVIGATION_LINKS.map((item, index) => (
-              <li key={index}>
-                {item.children ? (
-                  <div className="flex flex-col gap-2">
-                    <button
-                      onClick={toggleMobileDropdown}
-                      className="flex items-center justify-between text-lg"
+          <div className="absolute left-0 right-0 top-[65px] bg-[#f3e3d4] shadow-lg z-50">
+            <ul className="flex flex-col gap-4 px-4 py-4">
+              {NAVIGATION_LINKS.map((item, index) => (
+                <li key={index}>
+                  {item.children ? (
+                    <div className="flex flex-col gap-2">
+                      <button
+                        onClick={toggleMobileDropdown}
+                        className="flex items-center justify-between text-lg"
+                      >
+                        {item.label}
+                      </button>
+                      {isMobileDropdownOpen && (
+                        <ul className="ml-4 flex flex-col gap-1">
+                          {item.children.map((child, i) => (
+                            <li key={i}>
+                              <NavLink
+                                to={child.href}
+                                className={({ isActive }) =>
+                                  `text-base hover:text-[#A18167] ${
+                                    isActive ? "text-[#A18167]" : ""
+                                  }`
+                                }
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false);
+                                  setIsMobileDropdownOpen(false);
+                                }}
+                              >
+                                {child.label}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ) : (
+                    <NavLink
+                      to={item.href}
+                      className={({ isActive }) =>
+                        `block w-full text-lg hover:text-[#A18167] ${
+                          isActive ? "text-[#A18167]" : ""
+                        }`
+                      }
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      end={item.href === "/"}
                     >
                       {item.label}
-                    </button>
-                    {isMobileDropdownOpen && (
-                      <ul className="ml-4 flex flex-col gap-1">
-                        {item.children.map((child, i) => (
-                          <li key={i}>
-                            <NavLink
-                              to={child.href}
-                              className={({ isActive }) =>
-                                `text-base hover:text-[#A18167] ${
-                                  isActive ? "text-[#A18167]" : ""
-                                }`
-                              }
-                              onClick={() => {
-                                setIsMobileMenuOpen(false);
-                                setIsMobileDropdownOpen(false);
-                              }}
-                            >
-                              {child.label}
-                            </NavLink>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ) : (
-                  <NavLink
-                    to={item.href}
-                    className={({ isActive }) =>
-                      `block w-full text-lg hover:text-[#A18167] ${
-                        isActive ? "text-[#A18167]" : ""
-                      }`
-                    }
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    end={item.href === "/"}
-                  >
-                    {item.label}
-                  </NavLink>
-                )}
-              </li>
-            ))}
-          </ul>
+                    </NavLink>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
     </nav>
