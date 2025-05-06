@@ -44,7 +44,7 @@ const ReportajeDetalle = () => {
   return (
     <div className="overflow-y-auto scrollbar-hide relative">
       {/* BARRA SUPERIOR PARA < 1605px */}
-      <div className="mt-16 xl2:hidden sticky top-0 z-40 bg-[#EFE6DA] flex justify-between items-center px-4 py-1 shadow-md border-b border-gray-300">
+      <div className="xl2:hidden sticky top-0 z-40 bg-[#EFE6DA] flex justify-between items-center px-4 py-1 shadow-md border-b border-gray-300">
         {anterior ? (
           <button
             onClick={() => navigate(`/profesiones/${profesion}/${anterior.id}`)}

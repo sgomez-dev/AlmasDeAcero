@@ -23,10 +23,9 @@ const Inicio = () => {
         <h2 className="text-4xl font-bold md:text-5xl lg:text-[5rem] text-center">
           {HERO.name}
         </h2>
-        <p className="p-2 text-3xl tracking-tighter lg:text-4xl text-center">
+        <p className="p-2 text-3xl tracking-tighter lg:text-4xl text-center pb-8">
           {HERO.slogan}
         </p>
-        <p className="mb-8 p-2 text-md text-center">{HERO.description}</p>
       </div>
       <div
         className="w-full md:w-1/2 flex justify-center items-center"

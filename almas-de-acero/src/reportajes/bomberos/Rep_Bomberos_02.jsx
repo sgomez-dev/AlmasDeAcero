@@ -53,7 +53,7 @@ export const Rep_Bomberos_02 = () => {
                             <p className="text-justify leading-relaxed">
                                 Ser bombero en España representa algo más que un trabajo. Es una elección de vida que se basa en brindar ayuda, valor y el deseo de servir a los demás, incluso en situaciones de gran dificultad. Por esta razón, a pesar de que no haya un día nacional establecido, cada homenaje, sin importar cuándo se realice, transmite el mismo mensaje: agradecimiento, respeto y admiración.
                             </p>
-                            <p className="text-justify leading-relaxed">
+                            <p className="text-justify leading-relaxed pb-20">
                                 De esta forma, el Día del Bombero en España, ya sea el 4 de mayo, el 8 de marzo en Madrid o cualquier otra fecha local, se convierte en una ocasión para recordar que, detrás del uniforme, hay personas dedicadas a la vida, la responsabilidad y la esperanza.
                             </p>
                         </div>

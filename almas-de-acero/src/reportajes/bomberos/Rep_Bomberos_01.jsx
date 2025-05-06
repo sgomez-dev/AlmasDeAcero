@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Rep_Bomberos_01 = () => {
     return (
-        <div className="mt-16">
+        <div>
             <div className="h-screen flex flex-col">
                 <div className="flex-grow overflow-y-auto flex justify-center">
                     <div className="max-w-4xl  py-8 px-0">
@@ -64,7 +64,7 @@ export const Rep_Bomberos_01 = () => {
                             <p className="text-justify leading-relaxed">
                                 Con el tiempo, este triste evento ha sido analizado en numerosos estudios, exposiciones y actividades educativas. Proyectos como la "Ruta del Incendio de Santander" permiten a los habitantes y turistas visitar los lugares más afectados por el fuego, recuperando en la memoria lo que las llamas arrasaron. Estas rutas intentan no solo recordar, sino también enseñar a las nuevas generaciones sobre el impacto que tuvo el incendio en la identidad urbana y cultural de la ciudad. 
                             </p>
-                            <p className="text-justify leading-relaxed">
+                            <p className="text-justify leading-relaxed pb-20">
                                 Hoy, más de ochenta años después, el devastador incendio de 1941 aún es una marca clara en la historia de Santander. Su impacto se nota no solo en el diseño de sus calles y en el estilo de los edificios del centro, sino también en la memoria compartida de su gente. Ese viento del sur, tan inusual como destructivo, no solo transformó el aspecto de la ciudad, sino también el futuro de sus habitantes.
                             </p>
                         </div>

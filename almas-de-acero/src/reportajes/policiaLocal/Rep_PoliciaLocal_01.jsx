@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Rep_PoliciaLocal_01 = () => {
     return (
-        <div className="mt-16">
+        <div>
             <div className="h-screen flex flex-col">
                 <div className="flex-grow overflow-y-auto flex justify-center">
                     <div className="max-w-4xl py-8 px-0">
@@ -74,10 +74,10 @@ export const Rep_PoliciaLocal_01 = () => {
                             <p className="text-sm text-gray-500 mt-8 font-bold">
                                 Fuentes:<br />
                             </p>
-                            <ul className="list-disc list-inside text-justify">
-                                <li>https://academia-granada.es/oposiciones/funciones-policia-local/</li>
-                                <li>https://www.santander.es/ayuntamiento/gobierno-municipal/organigrama-ayto-concejalias/concejalia-servicios/polic%C3%ADa-local/</li>
-                                <li>https://vinfopol.com/9-competencias-de-la-policia-local-en-la-seguridad-ciudadana/</li>
+                            <ul className="list-disc list-inside text-justify pb-20">
+                                <li><a href='https://academia-granada.es/oposiciones/funciones-policia-local/' target='_blank' rel='noopener noreferrer'>https://academia-granada.es/oposiciones/funciones-policia-local/</a></li>
+                                <li><a href='https://www.santander.es/ayuntamiento/gobierno-municipal/organigrama-ayto-concejalias/concejalia-servicios/polic%C3%ADa-local/' target='_blank' rel='noopener noreferrer'>https://www.santander.es/ayuntamiento/gobierno-municipal/organigrama-ayto-concejalias/concejalia-servicios/polic%C3%ADa-local/</a></li>
+                                <li><a href='https://vinfopol.com/9-competencias-de-la-policia-local-en-la-seguridad-ciudadana/' target='_blank' rel='noopener noreferrer'>https://vinfopol.com/9-competencias-de-la-policia-local-en-la-seguridad-ciudadana/</a></li>
 
                             </ul>
                         </div>
