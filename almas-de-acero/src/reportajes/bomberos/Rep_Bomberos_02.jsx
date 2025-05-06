@@ -11,7 +11,7 @@ export const Rep_Bomberos_02 = () => {
                             {/* Imagen (izquierda en desktop, arriba en mobile) */}
                             <div className="md:w-1/1">
                                 <img
-                                    src="public/reportajes/bomberos/Rep_Bomberos_02.jpg"
+                                    src="/images/reportajes/bomberos/Rep_Bomberos_02.jpg"
                                     alt="Imagen del reportaje"
                                     className="w-full max-w-[600px] h-auto object-cover rounded-lg shadow-md"
                                 />
