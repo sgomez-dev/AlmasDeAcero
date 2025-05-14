@@ -6,6 +6,20 @@ export const reportajesSalvamentoMaritimo = [
       subtitulo: "En las costas del país peninsular hay puntos donde el mar no concede ningún tipo de tregua con los trabajadores de salvamento marítimo. El clima de estas zonas, la gran cantidad de tráfico o las rutas migratorias en pequeñas embarcaciones hace que en cualquier momento ocurra un suceso. Desde el mar revuelto y agresivo del Atlántico hasta las profundas aguas calientes llenas de fauna y flora de Canarias. Los equipos ponen constantemente su vida en peligro para proteger las vidas humanas de las personas que se lanzan al mar. Este reportaje trata de enseñar a los desconocedores de estas zonas muy activas y peligrosas para que la gente sepa que hacer y así no arriesgar su vida y la de los trabajadores de salvamento marítimo.",
      
     },
+    {
+      id: 2,
+      titulo: "Nuria Bravo, 'vocación de servicio' desde El Musel",
+      autores: ["Pablo Vázquez"],
+      subtitulo: "La comandante jefa del Helimer Cantábrico asegura que su motivación principal es el servicio público",
+      foto: "/images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_02.jpg",
+    },
+    {
+      id: 3,
+      titulo: "Mujeres rompiendo los estereotipos",
+      autores: ["Sofía Toraya"],
+      subtitulo: "Las mujeres de Salvamento Marítimo frente a un trabajo mayoritariamente predominado por los hombres",
+      foto: "/images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_03.jpg",
+    },
     // {
     //   id: 2,
     //   titulo: "Bomberos: Valor y Vocación",

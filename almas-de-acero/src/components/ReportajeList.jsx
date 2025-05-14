@@ -70,7 +70,7 @@ const ReportajeList = ({ reportajes, basePath }) => {
           onClick={() => handleClick(rep.id)}
           className="cursor-pointer bg-[#E9D3C0] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all"
         >
-          <div className="w-full h-32">
+          <div className="w-full h-75">
             <img
               src={rep.foto}
               alt={rep.titulo}
