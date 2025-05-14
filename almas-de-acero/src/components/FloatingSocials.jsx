@@ -24,7 +24,7 @@ const FloatingSocials = () => {
   ];
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center space-y-2">
+    <div className="fixed bottom-4 right-4 z-50 flex flex-row items-center space-x-2">
       <AnimatePresence>
         {isOpen &&
           socials.map((social, index) => (
@@ -33,9 +33,9 @@ const FloatingSocials = () => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.5, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.5, y: 20 }}
+              initial={{ opacity: 0, scale: 0.5, x: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.5, x: 20 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className={`flex items-center justify-center w-12 h-12 text-white rounded-full shadow-lg ${social.color}`}
             >
