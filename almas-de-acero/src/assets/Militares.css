@@ -1,0 +1,198 @@
+.militares-container {
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+@media (min-width: 768px) {
+  .militares-container {
+    padding: 2rem;
+  }
+}
+
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  touch-action: none; /* Permite el control táctil personalizado */
+}
+
+/* Estilos para móvil */
+@media (max-width: 767px) {
+  .map-container {
+    height: 80vh; /* Altura fija en móvil */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* Mejor scroll en iOS */
+  }
+
+  .world-map {
+    width: 200%; /* Mapa más grande para permitir zoom */
+    height: auto;
+    transform-origin: 0 0;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+
+  /* Controles de zoom para móvil */
+  .map-controls {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+  }
+
+  .zoom-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #457b9d;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .zoom-button:active {
+    background: #1e40af;
+  }
+}
+
+/* Estilos para desktop */
+@media (min-width: 768px) {
+  .map-container {
+    aspect-ratio: 16/9;
+  }
+
+  .world-map {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.world-map path {
+  transition: fill 0.3s ease;
+  cursor: pointer;
+  fill: #e2e8f0;
+  stroke: #94a3b8;
+  stroke-width: 0.5;
+}
+
+.world-map path:hover {
+  fill: #e63946;
+  stroke: #dc2626;
+}
+
+/* Estilos para los países con videos */
+.world-map path[data-has-video="true"] {
+  fill: #457b9d !important;
+  stroke: #1e40af !important;
+  stroke-width: 1;
+}
+
+.world-map path[data-has-video="true"]:hover {
+  fill: #e63946 !important;
+  stroke: #dc2626 !important;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content h2 {
+  margin: 0;
+  padding-right: 2rem; /* Espacio para el botón de cerrar */
+}
+
+.modal-content video {
+  width: 100%;
+  max-height: calc(90vh - 6rem); /* Altura máxima considerando el título y padding */
+  object-fit: contain;
+  border-radius: 0.25rem;
+  background: #000; /* Fondo negro para videos verticales */
+}
+
+/* Ajustes específicos para videos verticales */
+.modal-content video[style*="aspect-ratio: 9/16"],
+.modal-content video[style*="aspect-ratio: 3/4"] {
+  max-width: 400px; /* Ancho máximo para videos verticales */
+  margin: 0 auto; /* Centrar el video */
+}
+
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #e63946;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.close-button:hover {
+  background: #dc2f3d;
+}
+
+/* Ajustes para el modal en móvil */
+@media (max-width: 767px) {
+  .modal-content {
+    width: 95%;
+    margin: 0;
+    max-height: 85vh; /* Un poco más pequeño en móvil */
+  }
+
+  .modal-content video {
+    max-height: calc(85vh - 5rem);
+  }
+
+  .modal-content video[style*="aspect-ratio: 9/16"],
+  .modal-content video[style*="aspect-ratio: 3/4"] {
+    max-width: 300px; /* Más pequeño en móvil */
+  }
+}
