@@ -11,7 +11,7 @@ export const Rep_SalvamentoMaritimo_02 = () => {
                             {/* Imagen (izquierda en desktop, arriba en mobile) */}
                             <div>
                                 <img
-                                    src="public/images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_02.jpg"
+                                    src="/images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_02.jpg"
                                     alt="Nuria Bravo en las instalaciones del Helimer Cantábrico"
                                     className="w-full h-auto rounded-lg shadow-md object-cover"
                                 />
