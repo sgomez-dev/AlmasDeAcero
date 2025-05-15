@@ -20,6 +20,13 @@ export const reportajesSalvamentoMaritimo = [
       subtitulo: "Las mujeres de Salvamento Marítimo frente a un trabajo mayoritariamente predominado por los hombres",
       foto: "/images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_03.jpg",
     },
+    {
+      id: 4,
+      titulo: "Gijón, base de la enseñanza de Salvamento Marítimo",
+      autores: ["Pablo Vázquez"],
+      subtitulo: "En la ciudad asturiana, Salvamento Marítimo tiene su centro de enseñanza del país",
+      foto: "/images/reportajes/salvamentoMaritimo/Rep_Salvamento_04.jpg",
+    },
     // {
     //   id: 2,
     //   titulo: "Bomberos: Valor y Vocación",

@@ -63,26 +63,34 @@ const ReportajeList = ({ reportajes, basePath }) => {
 
 
       {/* Secundarios */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-10">
-      {secundarios.map((rep) => (
-        <div
-          key={rep.id}
-          onClick={() => handleClick(rep.id)}
-          className="cursor-pointer bg-[#E9D3C0] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all"
-        >
-          <div className="w-full h-75">
-            <img
-              src={rep.foto}
-              alt={rep.titulo}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-3">
-            <h3 className="text-sm md:text-base font-semibold leading-tight">{rep.titulo}</h3>
-          </div>
-        </div>
-      ))}
+{/* Secundarios */}
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-10">
+  {secundarios.map((rep) => (
+    <div
+      key={rep.id}
+      onClick={() => handleClick(rep.id)}
+      className="cursor-pointer bg-[#E9D3C0] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all"
+    >
+      {/* Contenedor de imagen con altura fija de 50px */}
+      <div className="w-full h-[275px] overflow-hidden"> {/* Altura fija de 50px */}
+        {rep.foto ? (
+          <img
+            src={rep.foto}
+            alt={rep.titulo}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-[#D9C6B7]" />
+        )}
+      </div>
+      
+      {/* Contenedor de texto (sin altura fija, se ajusta al contenido) */}
+      <div className="p-3">
+        <h3 className="text-sm md:text-base font-semibold">{rep.titulo}</h3>
+      </div>
     </div>
+  ))}
+</div>
 
     </div>
   );

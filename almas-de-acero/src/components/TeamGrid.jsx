@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { TEAM_MEMBERS } from '../constants/team';
 import { motion } from 'framer-motion';
-import { FaUser } from 'react-icons/fa';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaUser, FaChevronLeft, FaChevronRight, FaLinkedin } from 'react-icons/fa';
 
 const TeamGrid = () => {
+  console.log (TEAM_MEMBERS);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
 
@@ -69,6 +69,15 @@ const TeamGrid = () => {
                       <img src={member.image} alt={member.name} className="w-full h-full object-cover rounded-full" />
                     </div>
                     <h3 className="text-xl font-semibold mt-4 mb-2 text-center">{member.name}</h3>
+                    <p className="text-gray-700 text-center mb-4">{member.description}</p>
+                    <div className="flex space-x-4">
+                      {member.Linkedin && (
+                        <a href={member.Linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                          <FaLinkedin className="text-blue-700 text-2xl hover:text-blue-900" />
+                          <span className="text-blue-700 hover:text-blue-900 font-medium">Conóceme</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -88,4 +97,4 @@ const TeamGrid = () => {
   );
 };
 
-export default TeamGrid; 
+export default TeamGrid;

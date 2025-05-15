@@ -4,8 +4,15 @@ export const reportajesPoliciaLocal = [
       titulo: "Policía Local en España: más que agentes de tráfico",
       autores: ["Pablo Vázquez", "Sofía Toraya"],
       subtitulo: "El día que un incendio calcinó todo el casco histórico de Santander y parte de sus alrededores, dejando gran parte de la población sin sus viviendas",
+      foto: "/images/reportajes/policiaLocal/Rep_PoliciaLocal_01.jpg",
      
     },
+    {
+      id: 2,
+      titulo: "Los héroes no uniformados pero sí preparados",
+      autores: ["Pablo Vázquez", "Sofía Toraya"],
+      foto: "/images/reportajes/policiaLocal/Rep_PoliciaLocal_02.jpg",
+    }
     // {
     //   id: 2,
     //   titulo: "Bomberos: Valor y Vocación",
