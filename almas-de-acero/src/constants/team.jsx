@@ -16,7 +16,8 @@ export const TEAM_MEMBERS = [
     id: 3,
     name: "Dariana Mayte Asencio Muñoz",
     image: "/Dariana.jpeg",
-    description: "Informar con elegancia, escribir con pasión y vivir la moda con propósito."
+    description: "Informar con elegancia, escribir con pasión y vivir la moda con propósito.",
+    Linkedin: "https://www.linkedin.com/in/dariana-asencio-mu%C3%B1oz-999b75257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
   {
     id: 4,
