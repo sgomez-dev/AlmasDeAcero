@@ -97,6 +97,7 @@ export default function MusicModal({ open, setOpen }) {
             ))}
           </select>
         </label>
+
         <label className="block mb-4">
             <span className="text-gray-700">Modo de reproducción:</span>
             <select
@@ -137,6 +138,23 @@ export default function MusicModal({ open, setOpen }) {
                 onChange={(e) => setVolume(parseFloat(e.target.value))}
                 />
             </div>
+        </div>
+        <div className="mt-6 text-xs text-gray-600">
+            <p>
+                <strong>Créditos:</strong>
+            </p>
+            {currentTrack.name === "Cloud Dancer" && (
+                <p>
+                "Cloud Dancer" Kevin MacLeod (<a href="https://incompetech.com" className="underline" target="_blank">incompetech.com</a>)<br />
+                Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" className="underline" target="_blank">CC BY 4.0</a>
+                </p>
+            )}
+            {currentTrack.name === "Brain Dance" && (
+                <p>
+                "Brain Dance" Kevin MacLeod (<a href="https://incompetech.com" className="underline" target="_blank">incompetech.com</a>)<br />
+                Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" className="underline" target="_blank">CC BY 4.0</a>
+                </p>
+            )}
         </div>
       </div>
     </div>
