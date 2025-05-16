@@ -12,6 +12,14 @@ export const reportajesPoliciaLocal = [
       titulo: "Los héroes no uniformados pero sí preparados",
       autores: ["Pablo Vázquez", "Sofía Toraya"],
       foto: "/images/reportajes/policiaLocal/Rep_PoliciaLocal_02.jpg",
+    },
+    {
+      id: 3,
+      titulo: "(OK)upación en los pueblos de España",
+      autores: ["Sofía Toraya"],
+      subtitulo: "Sin pagar impuestos ni gastos, viven en los chalets de pueblos",
+      foto: "/images/reportajes/policiaLocal/Rep_PoliciaLocal_03_1.jpg",
+
     }
     // {
     //   id: 2,

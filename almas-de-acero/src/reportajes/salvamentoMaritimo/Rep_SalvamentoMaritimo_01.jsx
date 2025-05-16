@@ -8,7 +8,14 @@ export const Rep_SalvamentoMaritimo_01 = () => {
                     <div className="max-w-4xl py-8 px-0">
                         {/* Contenedor de imagen + título y autores */}
                         <div className="flex flex-col md:flex-row gap-6 mb-8">
-                            
+                            <div>
+                                <img
+                                    src="/images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_01.jpg"
+                                    alt="Lo más peligroso del mar y sus superhéroes"
+                                    className="w-[1000px] h-auto rounded-lg shadow-md object-cover mb-3"
+                                />
+                                <p className="text-xs text-gray-500 mt-1">Fuente Exponav.</p>
+                            </div>
                             {/* Título y autores (derecha en desktop, abajo en mobile) */}
                             <div className="md:w-2/3">
                                 <h1 className="text-3xl font-bold text-gray-800 mb-2">

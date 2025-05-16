@@ -3,7 +3,8 @@ export const TEAM_MEMBERS = [
     id: 1,
     name: "Ariana Pauleth Suárez Guamangallo",
     image: "/Ariana.jpeg",
-    description: ""
+    description: "Todo empieza con una historia. Y las buenas, siempre encuentran su voz.",
+    Linkedin: "https://www.linkedin.com/in/ary-suarez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
   {
     id: 2,

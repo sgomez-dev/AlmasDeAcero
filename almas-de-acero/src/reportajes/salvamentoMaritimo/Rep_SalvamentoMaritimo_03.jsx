@@ -8,17 +8,29 @@ export const Rep_SalvamentoMaritimo_03 = () => {
                     <div className="max-w-4xl w-full py-8">
                         {/* Header section */}
                         <div className="mb-8">
-                            <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                                Mujeres rompiendo los estereotipos
-                            </h1>
-                            
-                            <h2 className="text-xl text-gray-600 mb-4">
-                                Las mujeres de Salvamento Marítimo frente a un trabajo mayoritariamente predominado por los hombres
-                            </h2>
-                            
-                            <p className="text-lg text-gray-600 border-b pb-4">
-                                <span className="font-semibold">Por:</span> Sofía Toraya Bárcena
-                            </p>
+                            <div className="flex flex-col md:flex-row gap-6 mb-8">
+                                {/* Imagen principal */}
+                                <div>
+                                    <img
+                                        src="images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_03.jpg"
+                                        alt="Mujeres en Salvamento Marítimo"
+                                        className="w-[700px] h-auto rounded-lg shadow-md object-cover mb-3"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-1">Imagen: El mundo</p>
+                                </div>
+                                {/* Título y autor */}
+                                <div className="md:w-2/3 flex flex-col justify-center">
+                                    <h1 className="text-3xl font-bold text-gray-800 mb-2">
+                                        Mujeres rompiendo los estereotipos
+                                    </h1>
+                                    <h2 className="text-xl text-gray-600 mb-4">
+                                        Las mujeres de Salvamento Marítimo frente a un trabajo mayoritariamente predominado por los hombres
+                                    </h2>
+                                    <p className="text-lg font-semibold text-gray-600">
+                                        Por Sofía Toraya Bárcena
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         
                         {/* Article content */}
