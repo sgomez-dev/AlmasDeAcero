@@ -1,12 +1,15 @@
 import ControlsModal from "../components/ControlsModal";
 import React, { useState,useEffect, useRef } from "react";
 import MusicModal from "../components/MusicModal";
+import audioRef from "../audioController";
+
 
 
 const PruebaTuAcero = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [iframeFocused, setIframeFocused] = useState(true);
   const [musicOpen, setMusicOpen] = useState(false);
+  const [musicStarted, setMusicStarted] = useState(false);
   const iframeRef = useRef(null);
   
 
@@ -22,6 +25,26 @@ const PruebaTuAcero = () => {
       iframe.msRequestFullscreen();
     }
   };
+
+  useEffect(() => {
+    const startMusic = () => {
+      if (!musicStarted) {
+        audioRef.src = "/music/Brain Dance.mp3"; // pista por defecto
+        audioRef.play().then(() => {
+          setMusicStarted(true);
+        }).catch(() => {});
+      }
+    };
+
+    window.addEventListener("click", startMusic, { once: true });
+    window.addEventListener("touchstart", startMusic, { once: true });
+
+    return () => {
+      window.removeEventListener("click", startMusic);
+      window.removeEventListener("touchstart", startMusic);
+    };
+  }, [musicStarted]);
+
 
   // Monitorea el foco del iframe real
   useEffect(() => {

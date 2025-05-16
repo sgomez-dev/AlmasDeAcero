@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import audio from "../audioController"; // ruta relativa correcta según tu estructura
+
 
 const tracks = [
   { name: "Brain Dance", file: "/music/Brain Dance.mp3" },
@@ -6,54 +8,66 @@ const tracks = [
 ];
 
 export default function MusicModal({ open, setOpen }) {
-  const audioRef = useRef(new Audio());
   const [currentTrack, setCurrentTrack] = useState(tracks[0]);
   const [volume, setVolume] = useState(0.2);
   const [playing, setPlaying] = useState(true);
-  const [playMode, setPlayMode] = useState("loop-track"); // o "loop-all"
-
+  const [playMode, setPlayMode] = useState("loop-all"); //"loop-track" o "loop-all"
 
   useEffect(() => {
-    const audio = audioRef.current;
+    const handlePlay = () => setPlaying(true);
+    const handlePause = () => setPlaying(false);
+  
+    audio.addEventListener("play", handlePlay);
+    audio.addEventListener("pause", handlePause);
+  
+    return () => {
+      audio.removeEventListener("play", handlePlay);
+      audio.removeEventListener("pause", handlePause);
+    };
+  }, []);
+  
+  useEffect(() => {
     audio.src = currentTrack.file;
     audio.volume = volume;
-    if (playing) audio.play();
   
-    // 🔁 cuando la pista termina
+    if (playing) {
+      audio.play().catch(() => setPlaying(false));
+    }
+  
     const handleEnded = () => {
       if (playMode === "loop-all") {
         const currentIndex = tracks.findIndex(t => t.name === currentTrack.name);
         const nextIndex = (currentIndex + 1) % tracks.length;
         setCurrentTrack(tracks[nextIndex]);
       } else {
-        // loop la misma pista
         audio.currentTime = 0;
         audio.play();
       }
     };
   
     audio.addEventListener("ended", handleEnded);
+  
     return () => {
       audio.pause();
       audio.removeEventListener("ended", handleEnded);
     };
   }, [currentTrack, playMode]);
   
+  
 
   useEffect(() => {
-    const audio = audioRef.current;
     audio.volume = volume;
   }, [volume]);
-
+  
   const togglePlay = () => {
-    const audio = audioRef.current;
     if (playing) {
       audio.pause();
     } else {
-      audio.play();
+      audio.play().catch(() => {});
     }
     setPlaying(!playing);
   };
+  
 
   const skipToNextTrack = () => {
     const currentIndex = tracks.findIndex(t => t.name === currentTrack.name);
@@ -139,6 +153,7 @@ export default function MusicModal({ open, setOpen }) {
                 />
             </div>
         </div>
+        
         <div className="mt-6 text-xs text-gray-600">
             <p>
                 <strong>Créditos:</strong>
