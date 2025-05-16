@@ -10,14 +10,35 @@ export default function MusicModal({ open, setOpen }) {
   const [currentTrack, setCurrentTrack] = useState(tracks[0]);
   const [volume, setVolume] = useState(0.2);
   const [playing, setPlaying] = useState(true);
+  const [playMode, setPlayMode] = useState("loop-track"); // o "loop-all"
+
 
   useEffect(() => {
     const audio = audioRef.current;
     audio.src = currentTrack.file;
     audio.volume = volume;
     if (playing) audio.play();
-    return () => audio.pause();
-  }, [currentTrack]);
+  
+    // 🔁 cuando la pista termina
+    const handleEnded = () => {
+      if (playMode === "loop-all") {
+        const currentIndex = tracks.findIndex(t => t.name === currentTrack.name);
+        const nextIndex = (currentIndex + 1) % tracks.length;
+        setCurrentTrack(tracks[nextIndex]);
+      } else {
+        // loop la misma pista
+        audio.currentTime = 0;
+        audio.play();
+      }
+    };
+  
+    audio.addEventListener("ended", handleEnded);
+    return () => {
+      audio.pause();
+      audio.removeEventListener("ended", handleEnded);
+    };
+  }, [currentTrack, playMode]);
+  
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -34,6 +55,12 @@ export default function MusicModal({ open, setOpen }) {
     setPlaying(!playing);
   };
 
+  const skipToNextTrack = () => {
+    const currentIndex = tracks.findIndex(t => t.name === currentTrack.name);
+    const nextIndex = (currentIndex + 1) % tracks.length;
+    setCurrentTrack(tracks[nextIndex]);
+  };
+  
   if (!open) return null;
 
   return (
@@ -70,26 +97,46 @@ export default function MusicModal({ open, setOpen }) {
             ))}
           </select>
         </label>
+        <label className="block mb-4">
+            <span className="text-gray-700">Modo de reproducción:</span>
+            <select
+                className="block w-full mt-1 p-2 border rounded bg-[#f3e7d0]"
+                value={playMode}
+                onChange={(e) => setPlayMode(e.target.value)}
+            >
+                <option value="loop-track">🔂 Repetir canción</option>
+                <option value="loop-all">🔁 Reproducir todas</option>
+            </select>
+        </label>
+
 
         <div className="flex items-center gap-4">
-          <button
-            onClick={togglePlay}
-            className="bg-[#f3e7d0] hover:bg-[#e6dbc5] text-black font-bold py-2 px-4 rounded shadow"
-          >
-            {playing ? "⏸️ Pausar" : "▶️ Reproducir"}
-          </button>
+            <button
+                onClick={togglePlay}
+                className="bg-[#f3e7d0] hover:bg-[#e6dbc5] text-black font-bold py-2 px-4 rounded shadow"
+                >
+                {playing ? "⏸️ Pausar" : "▶️ Reproducir"}
+            </button>
+            {playMode === "loop-all" && (
+                <button
+                    onClick={skipToNextTrack}
+                    className="bg-[#f3e7d0] hover:bg-[#e6dbc5] text-black font-bold py-2 px-4 rounded shadow"
+                >
+                    ⏭️ Siguiente
+                </button>
+            )}
 
-          <div className="flex flex-col">
-            <label className="text-sm">Volumen</label>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={(e) => setVolume(parseFloat(e.target.value))}
-            />
-          </div>
+            <div className="flex flex-col">
+                <label className="text-sm">Volumen</label>
+                <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value={volume}
+                onChange={(e) => setVolume(parseFloat(e.target.value))}
+                />
+            </div>
         </div>
       </div>
     </div>
