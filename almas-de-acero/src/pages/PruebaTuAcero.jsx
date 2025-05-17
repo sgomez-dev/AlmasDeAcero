@@ -1,7 +1,8 @@
 import ControlsModal from "../components/ControlsModal";
 import React, { useState,useEffect, useRef } from "react";
 import MusicModal from "../components/MusicModal";
-import audioRef from "../audioController";
+import audio from "../audioController";
+import { nameToFileMap } from "../utils/musicTracks"; 
 
 
 
@@ -9,7 +10,6 @@ const PruebaTuAcero = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [iframeFocused, setIframeFocused] = useState(true);
   const [musicOpen, setMusicOpen] = useState(false);
-  const [musicStarted, setMusicStarted] = useState(false);
   const iframeRef = useRef(null);
   
 
@@ -28,23 +28,41 @@ const PruebaTuAcero = () => {
 
   useEffect(() => {
     const startMusic = () => {
-      if (!musicStarted) {
-        audioRef.src = "/music/Brain Dance.mp3"; // pista por defecto
-        audioRef.play().then(() => {
-          setMusicStarted(true);
-        }).catch(() => {});
+      const savedTrackName = localStorage.getItem("music_track");
+      const track = nameToFileMap[savedTrackName] || "/music/Brain Dance.mp3";
+
+      const savedVolume = localStorage.getItem("music_volume");
+      const savedPlaying = localStorage.getItem("music_playing");
+  
+      const volume = savedVolume !== null ? parseFloat(savedVolume) : 0.2;
+      const shouldPlay = savedPlaying === "true";
+  
+      audio.src = track;  
+      audio.volume = volume;
+  
+      const userHasConfigured =
+      savedTrackName !== null || savedVolume !== null || savedPlaying !== null;
+
+      if ((!userHasConfigured || shouldPlay) && volume > 0) {
+        audio.play().catch(() => {});
       }
+
+      };
+  
+    const runOnce = () => {
+      startMusic();
+      window.removeEventListener("click", runOnce);
+      window.removeEventListener("touchstart", runOnce);
     };
-
-    window.addEventListener("click", startMusic, { once: true });
-    window.addEventListener("touchstart", startMusic, { once: true });
-
+  
+    window.addEventListener("click", runOnce);
+    window.addEventListener("touchstart", runOnce);
+  
     return () => {
-      window.removeEventListener("click", startMusic);
-      window.removeEventListener("touchstart", startMusic);
+      window.removeEventListener("click", runOnce);
+      window.removeEventListener("touchstart", runOnce);
     };
-  }, [musicStarted]);
-
+  }, []);
 
   // Monitorea el foco del iframe real
   useEffect(() => {
@@ -93,7 +111,6 @@ const PruebaTuAcero = () => {
             </button>
 
           </div>
-
           {/* IFRAME del juego */}
           <iframe
             ref={iframeRef}

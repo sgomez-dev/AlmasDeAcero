@@ -1,18 +1,36 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import audio from "../audioController"; // ruta relativa correcta según tu estructura
+import { tracks } from "../utils/musicTracks";
 
-
-const tracks = [
-  { name: "Brain Dance", file: "/music/Brain Dance.mp3" },
-  { name: "Cloud Dancer", file: "/music/Cloud Dancer.mp3" },
-];
 
 export default function MusicModal({ open, setOpen }) {
   const [currentTrack, setCurrentTrack] = useState(tracks[0]);
   const [volume, setVolume] = useState(0.2);
   const [playing, setPlaying] = useState(true);
   const [playMode, setPlayMode] = useState("loop-all"); //"loop-track" o "loop-all"
+  const [loadedFromStorage, setLoadedFromStorage] = useState(false);
+  const [userInteracted, setUserInteracted] = useState(false);
 
+
+
+  useEffect(() => {
+    const savedVolume = localStorage.getItem("music_volume");
+    const savedTrack = localStorage.getItem("music_track");
+    const savedPlaying = localStorage.getItem("music_playing");
+    const savedMode = localStorage.getItem("music_mode");
+  
+    if (savedVolume !== null) setVolume(parseFloat(savedVolume));
+    if (savedTrack) {
+      const found = tracks.find(t => t.name === savedTrack);
+      if (found) setCurrentTrack(found);
+    }
+    if (savedPlaying !== null) setPlaying(savedPlaying === "true");
+    if (savedMode) setPlayMode(savedMode);
+  
+    setLoadedFromStorage(true);
+  }, []);
+  
+  
   useEffect(() => {
     const handlePlay = () => setPlaying(true);
     const handlePause = () => setPlaying(false);
@@ -27,7 +45,12 @@ export default function MusicModal({ open, setOpen }) {
   }, []);
   
   useEffect(() => {
-    audio.src = currentTrack.file;
+    if (!loadedFromStorage) return;
+  
+    if (audio.src !== window.location.origin + currentTrack.file) {
+      audio.src = currentTrack.file;
+    }
+  
     audio.volume = volume;
   
     if (playing) {
@@ -51,7 +74,8 @@ export default function MusicModal({ open, setOpen }) {
       audio.pause();
       audio.removeEventListener("ended", handleEnded);
     };
-  }, [currentTrack, playMode]);
+  }, [currentTrack, playMode, loadedFromStorage]);
+  
   
   
 
@@ -60,6 +84,7 @@ export default function MusicModal({ open, setOpen }) {
   }, [volume]);
   
   const togglePlay = () => {
+    setUserInteracted(true);
     if (playing) {
       audio.pause();
     } else {
@@ -68,12 +93,34 @@ export default function MusicModal({ open, setOpen }) {
     setPlaying(!playing);
   };
   
+  useEffect(() => {
+    if (!userInteracted) return;
+    localStorage.setItem("music_volume", volume.toString());
+  }, [volume, userInteracted]);
+  
+  useEffect(() => {
+    if (!userInteracted) return;
+    localStorage.setItem("music_track", currentTrack.name);
+  }, [currentTrack, userInteracted]);
+  
+  useEffect(() => {
+    if (!userInteracted) return;
+    localStorage.setItem("music_playing", playing.toString());
+  }, [playing, userInteracted]);
+  
+  useEffect(() => {
+    if (!userInteracted) return;
+    localStorage.setItem("music_mode", playMode);
+  }, [playMode, userInteracted]);
+  
 
   const skipToNextTrack = () => {
+    setUserInteracted(true); 
     const currentIndex = tracks.findIndex(t => t.name === currentTrack.name);
     const nextIndex = (currentIndex + 1) % tracks.length;
     setCurrentTrack(tracks[nextIndex]);
   };
+  
   
   if (!open) return null;
 
@@ -100,8 +147,9 @@ export default function MusicModal({ open, setOpen }) {
             className="block w-full mt-1 p-2 border rounded bg-[#f3e7d0]"
             value={currentTrack.name}
             onChange={(e) => {
-              const selected = tracks.find((t) => t.name === e.target.value);
-              setCurrentTrack(selected);
+                setUserInteracted(true);
+                const selected = tracks.find((t) => t.name === e.target.value);
+                setCurrentTrack(selected);
             }}
           >
             {tracks.map((track) => (
@@ -117,7 +165,7 @@ export default function MusicModal({ open, setOpen }) {
             <select
                 className="block w-full mt-1 p-2 border rounded bg-[#f3e7d0]"
                 value={playMode}
-                onChange={(e) => setPlayMode(e.target.value)}
+                onChange={(e) => {setPlayMode(e.target.value); setUserInteracted(true);}}
             >
                 <option value="loop-track">🔂 Repetir canción</option>
                 <option value="loop-all">🔁 Reproducir todas</option>
@@ -149,7 +197,11 @@ export default function MusicModal({ open, setOpen }) {
                 max="1"
                 step="0.01"
                 value={volume}
-                onChange={(e) => setVolume(parseFloat(e.target.value))}
+                onChange={(e) => {
+                    setUserInteracted(true); 
+                    setVolume(parseFloat(e.target.value));
+                  }}
+                  
                 />
             </div>
         </div>
@@ -170,8 +222,28 @@ export default function MusicModal({ open, setOpen }) {
                 Licensed under <a href="http://creativecommons.org/licenses/by/4.0/" className="underline" target="_blank">CC BY 4.0</a>
                 </p>
             )}
+            <div className="mt-6 text-right">
+                <button
+                    onClick={() => {
+                    localStorage.removeItem("music_volume");
+                    localStorage.removeItem("music_track");
+                    localStorage.removeItem("music_playing");
+                    localStorage.removeItem("music_mode");
+
+                    setVolume(0.2);
+                    setCurrentTrack(tracks[0]);
+                    setPlayMode("loop-all");
+                    setPlaying(true);
+                    setUserInteracted(false);
+                    }}
+                    className="text-sm text-red-600 hover:underline"
+                >
+                    🗑️ Restablecer configuración
+                </button>
+            </div>
         </div>
       </div>
+
     </div>
   );
 }
