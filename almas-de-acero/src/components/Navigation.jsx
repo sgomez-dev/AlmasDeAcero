@@ -55,7 +55,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img src="/logo.png" width={40} alt="logo" className="rounded-lg" />
-            <span className="text-xl font-bold text-gray-800">Almas de Acero</span>
+            <span className="text-xl font-bold text-gray-800 hidden lg:inline">Almas de Acero</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -74,7 +74,7 @@ const Navigation = () => {
                       : 'text-gray-600 hover:bg-[#ECE1D5]/50'}`}
                 >
                   <span className="text-xl">{item.icon}</span>
-                  <span>{item.label}</span>
+                  <span className='hidden lg:inline'>{item.label}</span>
                 </Link>
               </motion.div>
             ))}

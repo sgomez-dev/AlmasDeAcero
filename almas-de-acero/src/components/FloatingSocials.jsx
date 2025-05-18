@@ -21,6 +21,11 @@ const FloatingSocials = () => {
       link: "https://www.tiktok.com/@almas_de_aceroo",
       color: "bg-black",
     },
+    {
+      icon: <img src="/ivoox_icon.png" alt="Ivoox"  />,
+      link: "https://www.ivoox.com/podcast-almas-acero-detras-del-uniforme_sq_f12617496_1.html",
+      color: "bg-orange-500",
+    },
   ];
 
   return (
@@ -50,7 +55,7 @@ const FloatingSocials = () => {
       >
         <FaShareAlt className="text-xl" />
       </button>
-    </div>
+    </div>    
   );
 };
 
