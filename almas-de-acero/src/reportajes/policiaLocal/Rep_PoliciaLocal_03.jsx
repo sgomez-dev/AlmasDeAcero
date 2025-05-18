@@ -26,7 +26,7 @@ export const Rep_PoliciaLocal_03 = () => {
                                     Sin pagar impuestos ni gastos, viven en los chalets de pueblos
                                 </h2>
                                 <p className="text-lg font-semibold text-gray-600">
-                                    Por Pablo Vázquez Alonso. Miércoles, 14/05/2025
+                                    Por Sofía Toraya. Miércoles, 14/05/2025
                                 </p>
                             </div>
                         </div>
