@@ -3,7 +3,7 @@ const TimelineLayout = ({ title, events }) => {
       <div className="p-6 bg-gradient-to-b from-[#A18167] to-[#e9dac1] min-h-screen">
         <h1 className="text-4xl font-extrabold text-center mb-4 text-[#3e2723] drop-shadow-lg tracking-wide">{title}</h1>
         <hr className="mb-10 border-[#3e2723] w-1/2 mx-auto" />
-  
+
         {/* Secciones por año */}
         <div className="space-y-12">
           {events.map((event, idx) => (
@@ -19,10 +19,12 @@ const TimelineLayout = ({ title, events }) => {
                 {event.text}
               </div>
               {/* Imagen y fuente */}
-              <div className="flex flex-col items-center md:items-end w-full md:w-72">
-                <img src={event.image} alt={`Foto de ${event.year}`} className="w-full max-w-xs rounded-lg shadow-md mb-2 object-cover aspect-video" />
-                <p className="text-xs text-gray-500 mt-1 italic">Fuente: {event.source}</p>
-              </div>
+              {event.image && (
+                <div className="flex flex-col items-center md:items-end w-full md:w-72">
+                  <img src={event.image} alt={`Foto de ${event.year}`} className="w-full max-w-xs rounded-lg shadow-md mb-2 object-cover aspect-video" />
+                  <p className="text-xs text-gray-500 mt-1 italic">Fuente: {event.source}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
