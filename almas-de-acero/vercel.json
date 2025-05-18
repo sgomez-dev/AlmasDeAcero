@@ -1,0 +1,18 @@
+{
+    "headers": [
+      {
+        "source": "/prueba-tu-acero/Build/(.*)\\.br",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "br"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ]
+      }
+    ]
+  }
+  
