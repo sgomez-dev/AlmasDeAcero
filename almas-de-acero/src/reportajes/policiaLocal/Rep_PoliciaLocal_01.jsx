@@ -9,8 +9,14 @@ export const Rep_PoliciaLocal_01 = () => {
                         {/* Contenedor de imagen + título y autores */}
                         <div className="flex flex-col md:flex-row gap-6 mb-8">
                             {/* Imagen (izquierda en desktop, arriba en mobile) */}
-                           
-                            
+                            <div>
+                                <img
+                                    src="/images/reportajes/policiaLocal/Rep_PoliciaLocal_01.jpg"
+                                    alt="Policía Local en acción"
+                                    className="w-full h-auto rounded-lg shadow-md object-cover"
+                                />
+                                <p className="text-xs text-gray-500 mt-1">Imagen extraída de: Ayuntamiento de Santander</p>
+                            </div>
                             {/* Título y autores (derecha en desktop, abajo en mobile) */}
                             <div className="md:w-2/3">
                                 <h1 className="text-3xl font-bold text-gray-800 mb-2">
