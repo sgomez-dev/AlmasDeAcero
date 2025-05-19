@@ -64,9 +64,30 @@ export const Rep_Bomberos_01 = () => {
                             <p className="text-justify leading-relaxed">
                                 Con el tiempo, este triste evento ha sido analizado en numerosos estudios, exposiciones y actividades educativas. Proyectos como la "Ruta del Incendio de Santander" permiten a los habitantes y turistas visitar los lugares más afectados por el fuego, recuperando en la memoria lo que las llamas arrasaron. Estas rutas intentan no solo recordar, sino también enseñar a las nuevas generaciones sobre el impacto que tuvo el incendio en la identidad urbana y cultural de la ciudad. 
                             </p>
-                            <p className="text-justify leading-relaxed pb-20">
+                            <p className="text-justify leading-relaxed">
                                 Hoy, más de ochenta años después, el devastador incendio de 1941 aún es una marca clara en la historia de Santander. Su impacto se nota no solo en el diseño de sus calles y en el estilo de los edificios del centro, sino también en la memoria compartida de su gente. Ese viento del sur, tan inusual como destructivo, no solo transformó el aspecto de la ciudad, sino también el futuro de sus habitantes.
                             </p>
+                             <div className="bg-[#e9d3c0] rounded-lg p-4 mt-6 mb-20 flex items-center gap-4">
+                                <svg className="w-8 h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01" />
+                                </svg>
+                                <div>
+                                    <p className="font-semibold text-blue-700">¿Quieres saber más?</p>
+                                    <p>
+                                        Escucha este podcast que también puede gustarte:&nbsp;
+                                        <a
+                                            href="https://www.ivoox.com/incendio-santander-audios-mp3_rf_147154352_1.html"
+                                            className="text-blue-600 underline hover:text-blue-800"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Incendio de Santander (iVoox)
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p className="text-justify leading-relaxed pb-20"></p>
                         </div>
                     </div>
                 </div>
