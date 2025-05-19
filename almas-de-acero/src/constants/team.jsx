@@ -30,8 +30,8 @@ export const TEAM_MEMBERS = [
   {
     id: 5,
     name: "Enrique Torralbo Ramos",
-    image: "/Enrique.jpeg",
-    description: "Sic parvis magna: la grandeza nace de atreverse a empezar",
+    image: "/Enrique 2.png",
+    description: `"Sic parvis magna": la grandeza nace de atreverse a empezar`,
     Linkedin: "https://www.linkedin.com/in/enriquetorralboramos"
   },
   {
