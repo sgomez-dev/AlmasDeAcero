@@ -102,6 +102,8 @@ const Inicio = () => {
         ))}
       </div>
 
+
+
       {/* Featured Section */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -123,6 +125,30 @@ const Inicio = () => {
             Prueba tu Acero
             <FaArrowRight className="ml-2" />
           </Link>
+        </div>
+      </motion.div>
+
+      {/* Buzzfeed Test Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="bg-[#d2c2b0] backdrop-blur-sm rounded-2xl p-8 mb-16 text-center"
+      >
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">¿Qué héroe de uniforme eres?</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+          Descubre con este test de BuzzFeed qué tipo de héroe vive en ti.
+        </p>
+        <div className="flex justify-center">
+          <a
+            href="https://www.buzzfeed.com/lazyowl487/aqua-haroe-de-uniforme-vive-en-ti-71d5o2g782?utm_source=dynamic&utm_campaign=bfsharecopy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-[#ECE1D5] text-gray-800 rounded-lg hover:bg-[#ECE1D5]/80 transition-colors font-semibold"
+          >
+            Ir al test en BuzzFeed
+            <FaArrowRight className="ml-2" />
+          </a>
         </div>
       </motion.div>
 
