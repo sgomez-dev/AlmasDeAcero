@@ -70,11 +70,6 @@ const ReportajeDetalle = () => {
         )}
       </div>
 
-      {/* CONTENIDO DEL REPORTAJE */}
-      <ReportajeComponent />
-      <FloatingCTA path={`/linea-del-tiempo/${profesion}`} />
-
-
       {/* BOTONES LATERALES FIJOS SOLO A PARTIR DE 1605px */}
       {anterior && (
         <button
@@ -93,6 +88,11 @@ const ReportajeDetalle = () => {
           {siguiente.titulo} →
         </button>
       )}
+      {/* CONTENIDO DEL REPORTAJE */}
+      <ReportajeComponent />
+      <FloatingCTA path={`/linea-del-tiempo/${profesion}`} />
+
+
     </div>
   );
 };
