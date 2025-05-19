@@ -13,7 +13,7 @@ export const Rep_Militares_01 = () => {
                                     alt="Entrevista a José María Grande Urquijo"
                                     className="w-full h-auto rounded-lg shadow-md object-cover"
                                 />
-                                <p className="text-xs text-gray-500 mt-1">Foto: Archivo personal</p>
+                                <p className="text-xs text-gray-500 mt-1">Foto: BBC, CNN y La Nación</p>
                             </div>
 
                             <div className="md:w-2/3">
