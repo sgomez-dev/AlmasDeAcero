@@ -92,7 +92,7 @@ export const Rep_Militares_01 = () => {
                             <p className="text-justify leading-relaxed">
                                 Putin lo que quiere es volver, no a la Unión Soviética, sino a tener los territorios que poseía la Unión Soviética. Porque si os fijáis en el mapa, Rusia está a caballo entre Europa y Asia.  Destacar que tiene más en Asia.
                             </p>
-                            <p className="text-justify leading-relaxed">¿Destacar que Putin no habla de la Unión Europea, que opinas?</p>
+                            <p className="font-semibold text-xl">¿Destacar que Putin no habla de la Unión Europea, que opinas?</p>
                             <p className="text-justify leading-relaxed">
                                 Putin nunca habla de la Unión Europea. Esto es importante. Putin nunca habla de la Unión Europea. Putin siempre habla de la Europa de los pueblos. Y Putin negocia con Rumanía, negocia con Polonia, negocia con Bulgaria.. Sí, pero todos esos países pertenecen a la Unión Europea. Pero no negocia con la Unión Europea. Negocia bilateralmente. Porque bilateralmente, es más fácil que yo te convenza a ti.
                             </p>
