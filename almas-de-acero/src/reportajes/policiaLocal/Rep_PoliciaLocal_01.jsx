@@ -77,15 +77,15 @@ export const Rep_PoliciaLocal_01 = () => {
                             <p className="text-justify leading-relaxed">
                                 Su trabajo discreto, a menudo poco reconocido, asegura que, ante cualquier inconveniente, siempre habrá una patrulla cercana dispuesta a ofrecer ayuda. 
                             </p>
-                            <p className="text-sm text-gray-500 mt-8 font-bold">
-                                Fuentes:<br />
-                            </p>
-                            <ul className="list-disc list-inside text-justify pb-20">
-                                <li><a href='https://academia-granada.es/oposiciones/funciones-policia-local/' target='_blank' rel='noopener noreferrer'>https://academia-granada.es/oposiciones/funciones-policia-local/</a></li>
-                                <li><a href='https://www.santander.es/ayuntamiento/gobierno-municipal/organigrama-ayto-concejalias/concejalia-servicios/polic%C3%ADa-local/' target='_blank' rel='noopener noreferrer'>https://www.santander.es/ayuntamiento/gobierno-municipal/organigrama-ayto-concejalias/concejalia-servicios/polic%C3%ADa-local/</a></li>
-                                <li><a href='https://vinfopol.com/9-competencias-de-la-policia-local-en-la-seguridad-ciudadana/' target='_blank' rel='noopener noreferrer'>https://vinfopol.com/9-competencias-de-la-policia-local-en-la-seguridad-ciudadana/</a></li>
-
+                        {/* Links section */}
+                        <div className="mt-8 pt-4 border-t border-gray-200">
+                            <h3 className="font-bold text-lg mb-4">Fuentes y enlaces relacionados:</h3>
+                            <ul className="space-y-2 text-blue-600">
+                                <li><a href="https://academia-granada.es/oposiciones/funciones-policia-local/" target="_blank" rel="noopener noreferrer">Academia Granada: Funciones Policía Local</a></li>
+                                <li><a href="https://www.santander.es/ayuntamiento/gobierno-municipal/organigrama-ayto-concejalias/concejalia-servicios/polic%C3%ADa-local/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Santander: Policía Local</a></li>
+                                <li><a href="https://vinfopol.com/9-competencias-de-la-policia-local-en-la-seguridad-ciudadana/" target="_blank" rel="noopener noreferrer">Vinfopol: Competencias de la Policía Local</a></li>
                             </ul>
+                        </div>
                         </div>
                     </div>
                 </div>
