@@ -6,31 +6,32 @@ export const Rep_PoliciaLocal_03 = () => {
             <div className="h-screen flex flex-col">
                 <div className="flex-grow overflow-y-auto flex justify-center">
                     <div className="max-w-4xl py-8 px-0">
-                        {/* Contenedor de imagen + título */}
-                        <div className="flex flex-col md:flex-row gap-6 mb-8">
-                            {/* Imagen principal */}
-                            <div>
-                                <img
-                                    src="images/reportajes/policiaLocal/Rep_PoliciaLocal_03_1.jpg"
-                                    alt="Problema de okupación en pueblos españoles"
-                                    className="w-full h-[250px] rounded-lg shadow-md object-cover"
-                                />
-                                <p className="text-xs text-gray-500 mt-1">Imagen: El mundo</p>
-                            </div>
-                            {/* Título y autor */}
-                            <div className="md:w-2/3 flex flex-col justify-center">
-                                <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                                    (OK)upación en los pueblos de España
-                                </h1>
-                                <h2 className="text-xl text-gray-600 mb-4">
-                                    Sin pagar impuestos ni gastos, viven en los chalets de pueblos
-                                </h2>
-                                <p className="text-lg font-semibold text-gray-600">
-                                    Por Sofía Toraya. Miércoles, 14/05/2025
-                                </p>
-                            </div>
+                        {/* Header with author */}
+
+                        {/* Main image */}
+                        <div className="mb-6">
+                            <img
+                                src="images/reportajes/policiaLocal/Rep_PoliciaLocal_03_1.jpg"
+                                alt="Problema de okupación en pueblos españoles"
+                                className="w-full h-auto rounded-lg shadow-md object-cover"
+                            />
+                            <p className="text-xs text-gray-500 mt-1">Imagen: El mundo</p>
                         </div>
-                        {/* Texto del reportaje */}
+
+                        {/* Main title */}
+                        <h1 className="text-3xl font-bold text-gray-800 mb-2">
+                            (OK)upación en los pueblos de España
+                        </h1>
+                        
+                        {/* Subtitle */}
+                        <h2 className="text-xl text-gray-600 mb-8">
+                            Sin pagar impuestos ni gastos, viven en los chalets de pueblos
+                        </h2>
+                         <p className="text-lg font-semibold text-gray-600">
+                            Escrito por: Pablo Vázquez Alonso. Miércoles, 14/05/2025
+                        </p>
+
+                        {/* Article content */}
                         <div className="space-y-4 text-gray-700 pb-20">
                             <p className="text-justify leading-relaxed">
                                 El fenómeno de la okupación de viviendas en los últimos años ha generado una preocupación social y política muy intensa en toda España, pero solo se ve su relevancia en las ciudades ya que estas tienen la atención mediática, dejando en una preocupación silenciosa en los pueblos. A pesar de que su verdadera frecuencia es inferior a lo que la opinión pública cree, el análisis en los medios de comunicación y el lenguaje político han llevado a un aumento en la sensación de peligro, sobre todo en pequeñas localidades y áreas urbanas en riesgo. En este escenario, las fuerzas policiales locales enfrentan una situación difícil debido a que reciben la presión de la comunidad, teniendo así restricciones por leyes y a menudo llegan a carecer de los recursos necesarios para proceder de manera efectiva.
@@ -53,11 +54,11 @@ export const Rep_PoliciaLocal_03 = () => {
                             </p>
 
                             {/* Data source section with second image */}
-                            <div className="flex flex-col items-center mb-6">
+                            <div>
                                 <img
                                     src="images/reportajes/policiaLocal/Rep_PoliciaLocal_03_2.png"
                                     alt="Datos estadísticos sobre okupación en pueblos"
-                                    className="w-auto h-[300px] rounded-lg shadow-md object-cover mb-3"
+                                    className="w-full h-auto rounded-lg shadow-md object-cover mb-3"
                                 />
                                 <p className="text-sm text-gray-600">Datos extraídos de: Wolo</p>
                                 <p className="text-sm text-gray-600">Gráfico realizado por: Sofía Toraya</p>
@@ -75,6 +76,7 @@ export const Rep_PoliciaLocal_03 = () => {
                                 La okupación en los pueblos no es únicamente quedarse con una casa que no les corresponde sino también la fragilidad que causa esto en el pueblo, haciendo que muchos se vayan por miedo a ser dañados. Demuestra que antes esta situación es necesaria la rápida intervención para que no consigan su objetivo y que luego los servicios de emergencia no tengan que ponerse en riesgo y se agilice todo. Esto no es juego está en riesgo la convivencia en los pueblos y donde la mayoría de abuelos se han criado dejando un legado familiar ahí.  
                             </p>
 
+                            {/* Links section */}
                             <div className="mt-8 pt-4 border-t border-gray-200">
                                 <h3 className="font-bold text-lg mb-4">Fuentes y enlaces relacionados:</h3>
                                 <ul className="space-y-2 text-blue-600">

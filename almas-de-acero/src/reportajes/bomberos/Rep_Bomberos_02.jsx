@@ -34,7 +34,7 @@ export const Rep_Bomberos_02 = () => {
                             </div>
                         </div>
                         {/* Texto del reportaje */}
-                        <div className="space-y-4 text-gray-700 pb-20">
+                        <div className="space-y-4 text-gray-700 pb-200">
                             <p className="text-justify leading-relaxed">
                                 En España, los bomberos son uno de los grupos más respetados por la comunidad. Su esfuerzo continuo en combatir incendios, llevar a cabo rescates en accidentes, atender emergencias naturales y enfrentarse a situaciones críticas los hace esenciales para la seguridad pública. A pesar de que no hay un día nacional específico oficialmente establecido como el Día del Bombero en España, hay días de reconocimiento en varias regiones. A nivel mundial, el 4 de mayo se considera una fecha simbólica para honrarlos.
                             </p>
@@ -53,9 +53,30 @@ export const Rep_Bomberos_02 = () => {
                             <p className="text-justify leading-relaxed">
                                 Ser bombero en España representa algo más que un trabajo. Es una elección de vida que se basa en brindar ayuda, valor y el deseo de servir a los demás, incluso en situaciones de gran dificultad. Por esta razón, a pesar de que no haya un día nacional establecido, cada homenaje, sin importar cuándo se realice, transmite el mismo mensaje: agradecimiento, respeto y admiración.
                             </p>
-                            <p className="text-justify leading-relaxed pb-20">
+                            <p className="text-justify leading-relaxed">
                                 De esta forma, el Día del Bombero en España, ya sea el 4 de mayo, el 8 de marzo en Madrid o cualquier otra fecha local, se convierte en una ocasión para recordar que, detrás del uniforme, hay personas dedicadas a la vida, la responsabilidad y la esperanza.
                             </p>
+                             <div className="bg-[#e9d3c0] rounded-lg p-4 mt-6 mb-20 flex items-center gap-4">
+                                <svg className="w-8 h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01" />
+                                </svg>
+                                <div>
+                                    <p className="font-semibold text-blue-700">¿Quieres saber más?</p>
+                                    <p>
+                                        Escucha este podcast que también puede gustarte:&nbsp;
+                                        <a
+                                            href="https://www.ivoox.com/dia-del-bombero-en-espana-audios-mp3_rf_147161417_1.html"
+                                            className="text-blue-600 underline hover:text-blue-800"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Día del bombero en España (iVoox)
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p className="text-justify leading-relaxed pb-20"></p>
                         </div>
                     </div>
                 </div>

@@ -66,7 +66,26 @@ export const Rep_PoliciaLocal_02 = () => {
                             <p className="text-justify leading-relaxed">
                                 Los perros de policía son mucho más que simples herramientas. Son compañeros, cuidadores, protectores y, en ocasiones, terapeutas tanto de personas mayores como de niños que necesitan de un apoyo. Representan un modo diferente de garantizar seguridad: más humano, más sensible y, sin duda, más efectivo. Invertir en su formación, asegurar su bienestar y regular su papel no es solo un asunto ético, sino también estratégico. Porque en cada operación, en cada calle vigilada o persona asistida, hay un hocico activo y un corazón leal trabajando por el bienestar colectivo.
                             </p>
-                            
+                             <div className="bg-[#e9d3c0] rounded-lg p-4 mt-6 mb-20 flex items-center gap-4">
+                                <svg className="w-8 h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01" />
+                                </svg>
+                                <div>
+                                    <p className="font-semibold text-blue-700">¿Quieres saber más?</p>
+                                    <p>
+                                        Escucha este podcast que también puede gustarte:&nbsp;
+                                        <a
+                                            href="https://www.ivoox.com/rol-invisible-perros-policia-audios-mp3_rf_147161381_1.html"
+                                            className="text-blue-600 underline hover:text-blue-800"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            El rol invisible de los perros policía (iVoox)
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                             {/* Sección de enlaces */}
                             <div className="mt-8 pt-4 border-t border-gray-200">
                                 <h3 className="font-bold text-lg mb-4">Fuentes y enlaces relacionados:</h3>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ReactComponent as WorldMap } from '../assets/world.svg';
+import ReportajeList from '../components/ReportajeList';
+import { reportajesMilitares } from '../constants/ReportajesMilitares';
 import '../assets/Militares.css';
 
 const Militares = () => {
@@ -168,6 +170,8 @@ const Militares = () => {
           </div>
         </div>
       )}
+      <hr className="my-12 border-t-2 border-black" />
+      <ReportajeList reportajes={reportajesMilitares} basePath="/profesiones/militares" />
     </div>
   );
 };

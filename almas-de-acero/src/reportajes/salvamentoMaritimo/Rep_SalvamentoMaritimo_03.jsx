@@ -7,29 +7,29 @@ export const Rep_SalvamentoMaritimo_03 = () => {
                 <div className="flex-grow overflow-y-auto flex justify-center px-4">
                     <div className="max-w-4xl w-full py-8">
                         {/* Header section */}
-                        <div className="mb-8">
-                            <div className="flex flex-col md:flex-row gap-6 mb-8">
-                                {/* Imagen principal */}
-                                <div>
-                                    <img
-                                        src="images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_03.jpg"
-                                        alt="Mujeres en Salvamento Marítimo"
-                                        className="w-[700px] h-auto rounded-lg shadow-md object-cover mb-3"
-                                    />
-                                    <p className="text-xs text-gray-500 mt-1">Imagen: El mundo</p>
-                                </div>
-                                {/* Título y autor */}
-                                <div className="md:w-2/3 flex flex-col justify-center">
-                                    <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                                        Mujeres rompiendo los estereotipos
-                                    </h1>
-                                    <h2 className="text-xl text-gray-600 mb-4">
-                                        Las mujeres de Salvamento Marítimo frente a un trabajo mayoritariamente predominado por los hombres
-                                    </h2>
-                                    <p className="text-lg font-semibold text-gray-600">
-                                        Por Sofía Toraya Bárcena
-                                    </p>
-                                </div>
+                        <div className="flex flex-col md:flex-row gap-6 mb-8">
+                            {/* Imagen (izquierda en desktop, arriba en mobile) */}
+                            <div>
+                                <img
+                                    src="images/reportajes/salvamentoMaritimo/Rep_SalvamentoMaritimo_03.jpg"
+                                    alt="Problema de okupación en pueblos españoles"
+                                    className="w-[550px] h-auto rounded-lg shadow-md object-cover"
+                                />
+                                <p className="text-xs text-gray-500 mt-1">Imagen: El mundo</p>
+                            </div>
+                            {/* Título y autores (derecha en desktop, abajo en mobile) */}
+                            <div className="md:w-2/3">
+                                <h1 className="text-3xl font-bold text-gray-800 mb-2">
+                                    Mujeres rompiendo los estereotipos
+                                </h1>
+                                
+                                <h2 className="text-xl text-gray-600 mb-4">
+                                    Las mujeres de Salvamento Marítimo frente a un trabajo mayoritariamente predominado por los hombres
+                                </h2>
+                                
+                                <p className="text-lg text-gray-600 border-b pb-4">
+                                    <span className="font-semibold">Por:</span> Sofía Toraya Bárcena
+                                </p>
                             </div>
                         </div>
                         
@@ -78,7 +78,26 @@ export const Rep_SalvamentoMaritimo_03 = () => {
                             <p className="text-justify leading-relaxed">
                                 Entidades como CGT Mar y Puertos han empezado a destacar estas narrativas, mientras que medios como RTVE o YoDona ayudan a difundir sus relatos. Esto ha permitido que el rol de las mujeres en el mar sea valorado no solo por su valentía, sino también por su profesionalismo.
                             </p>
-                            
+                            <div className="bg-[#e9d3c0] rounded-lg p-4 mt-6 flex items-center gap-4">
+                                <svg className="w-8 h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01" />
+                                </svg>
+                                <div>
+                                    <p className="font-semibold text-blue-700">¿Quieres saber más?</p>
+                                    <p>
+                                        Escucha este podcast que también puede gustarte:&nbsp;
+                                        <a
+                                            href="https://www.ivoox.com/mujeres-salvan-vidas-en-el-mar-audios-mp3_rf_147161447_1.html"
+                                            className="text-blue-600 underline hover:text-blue-800"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Mujeres salvan vidas en el mar (iVoox)
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                             {/* Sources section */}
                             <div className="mt-8 pt-4 border-t">
                                 <h3 className="font-bold text-gray-800 mb-2">Fuentes:</h3>

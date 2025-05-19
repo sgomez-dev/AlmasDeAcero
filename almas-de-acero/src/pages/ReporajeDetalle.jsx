@@ -2,12 +2,14 @@
 import { reportajesBomberos } from '../constants/ReportajesBomberos';
 import { reportajesPoliciaLocal } from '../constants/ReportajesPoliciaLocal';
 import { reportajesSalvamentoMaritimo } from '../constants/ReportajesSalvamentoMaritimo';
+import { reportajesMilitares } from '../constants/ReportajesMilitares';
 import FloatingCTA from '../components/FloatingCTA';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { COMPONENTES_BOMBEROS } from '../reportajes/bomberos';
 import { COMPONENTES_POLICIA_LOCAL } from '../reportajes/policiaLocal';
 import { COMPONENTES_SALVAMENTO_MARITIMO } from '../reportajes/salvamentoMaritimo';
+import { COMPONENTES_MILITARES } from '../reportajes/militares';
 
 const dataMap = {
   'bomberos': {
@@ -21,7 +23,11 @@ const dataMap = {
   'salvamento-maritimo': {
     reportajes: reportajesSalvamentoMaritimo,
     componentes: COMPONENTES_SALVAMENTO_MARITIMO,
-  }
+  },
+  'militares': {
+    reportajes: reportajesMilitares,
+    componentes: COMPONENTES_MILITARES,
+  },
 };
 
 const ReportajeDetalle = () => {
