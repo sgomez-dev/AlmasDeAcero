@@ -9,7 +9,7 @@ export const TEAM_MEMBERS = [
   {
     id: 2,
     name: "Alejandro Rubio Cao",
-    image: "/Alejandro.jpeg",
+    image: "/Alejandro2.jpeg",
     description: "Vivo en el equilibrio incómodo entre ‘nada importa’ y ‘todo importa demasiado’. Y desde ahí, construyo.",
     Linkedin: "https://www.linkedin.com/in/alejandro-rubio-cao-82b0181b5/"
   },
@@ -44,7 +44,7 @@ export const TEAM_MEMBERS = [
   {
     id: 7,
     name: "Santiago Gómez de la Torre Romero",
-    image: "/Santiago.jpg",
+    image: "/Santiago2.jpeg",
     description: "Siempre dar lo mejor de ti",
     Linkedin: "https://www.linkedin.com/in/sgomez-dev/"
 
@@ -52,7 +52,7 @@ export const TEAM_MEMBERS = [
   {
     id: 8,
     name: "Sofía Toraya Bárcena",
-    image: "/Sofia.jpeg",
+    image: "/Sofia3.jpeg",
     description: "Podemos ir al límite y al mismo tiempo disfrutarlo",
     Linkedin: "https://www.linkedin.com/in/sofia-toraya-barcena?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
