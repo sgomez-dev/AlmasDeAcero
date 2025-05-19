@@ -151,37 +151,6 @@ const Inicio = () => {
           </a>
         </div>
       </motion.div>
-
-      {/* Testimonials Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7 }}
-        className="text-center bg-[#d2c2b0] backdrop-blur-sm rounded-2xl p-8 mb-16"
-      >
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">Historias que Inspiran</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Aquí se pueden agregar testimonios reales */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <p className="text-gray-600 italic mb-4">
-              "Cada día es una oportunidad para servir y proteger a nuestra comunidad."
-            </p>
-            <p className="text-gray-800 font-semibold">- Oficial de Policía Local</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <p className="text-gray-600 italic mb-4">
-              "El mar nos enseña humildad y nos recuerda que siempre hay alguien que necesita ayuda."
-            </p>
-            <p className="text-gray-800 font-semibold">- Rescatador Marítimo</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <p className="text-gray-600 italic mb-4">
-              "Ser bombero no es solo un trabajo, es una forma de vida dedicada a los demás."
-            </p>
-            <p className="text-gray-800 font-semibold">- Bombero</p>
-          </div>
-        </div>
-      </motion.div>
     </div>
   );
 };
